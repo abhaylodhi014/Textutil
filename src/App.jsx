@@ -70,13 +70,15 @@ function App() {
     <>
      {/* yaha se sab kuch start hoga */}
      <Router>
-       < Navbar mode={mode} toggleMode={toggleMode}  togglegreenMode={togglegreenMode}/>
+       < Navbar 
+        tittle="TextUtil App"  mode={mode} toggleMode={toggleMode}  togglegreenMode={togglegreenMode}/>
        
    <Alert  alert={alert}  />
    <div className="container my-3">
    <Routes>
     {/* exact use karne se path ko complete match karega */}
     <Route exact path="/" element={ < Textform  heading="Enter the text area" mode={mode} showAlert={showAlert} />} />
+    <Route exact path="/Textutil" element={ < Textform  heading="Enter the text area" mode={mode} showAlert={showAlert} />} />
    
         <Route  exact path="/About" element={ < About  mode={mode}/>} />   
       </Routes>
